@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/gray_active_icon">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="1dp" />
+            <solid android:color="@color/transparent" />
+            <corners android:radius="100dp" /> <!--create circle background-->
+        </shape>
+    </item>
+</ripple>

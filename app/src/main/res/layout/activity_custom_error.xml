@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+  android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:contentDescription="@null"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/logoprint" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Malheureusement, l'application a cessé de fonctionner"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="800dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Si le problème persiste, veuillez communiquer avec nous à l'adresse efficaisse@esprit.tn ou par téléphone 99707230"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/description"
+                android:layout_width="512dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="128dp"
+                android:layout_marginRight="128dp"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Raconter le plus exactement possible ce qui s'est passé..."
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/gray_active_icon"
+                app:backgroundTint="@color/white" />
+
+            <Button
+                android:id="@+id/restart"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_weight="0"
+                android:background="@color/white"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Redémarrer l'application" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

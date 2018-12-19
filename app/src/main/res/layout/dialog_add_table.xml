@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/meeting" />
+
+    <EditText
+        android:id="@+id/libelle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+
+
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_gray"
+        android:hint="Libelle"
+        android:inputType="textPersonName"
+        android:paddingLeft="16dp"
+        android:textColorHint="@color/textColorHint" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+
+
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_gray"
+        android:hint="Description"
+        android:inputType="textPersonName"
+        android:paddingLeft="16dp"
+        android:textColorHint="@color/textColorHint" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_round_green"
+        android:text="Ajouter"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_round_gray"
+        android:text="Fermer"
+        android:textColor="@color/cardview_light_background" />
+</LinearLayout>

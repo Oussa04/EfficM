@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <tn.meteor.efficaisse.utils.SquareImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/product" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/libelle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Libelle"
+            android:inputType="textPersonName"
+            android:text="Crepes"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:layout_weight="1"
+
+                android:src="@drawable/ic_photo"
+                android:tint="@color/colorWhite"
+                app:cb_color="@color/colorAccent"
+                app:cb_pressedRingWidth="8dip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawableLeft="@drawable/ic_save"
+                    android:drawableTint="@android:color/white"
+                    android:text="Sauvegarder"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/delete"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorRed"
+                    android:drawableLeft="@drawable/ic_delete"
+                    android:drawableTint="@android:color/white"
+                    android:text="Supprimer"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawableLeft="@drawable/ic_mode_edit"
+                    android:drawableTint="@android:color/white"
+                    android:text="Modifier"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:drawableLeft="@drawable/ic_close"
+                    android:drawableTint="@android:color/white"
+                    android:text="Fermer"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

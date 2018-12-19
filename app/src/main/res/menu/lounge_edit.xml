@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_table"
+
+        android:orderInCategory="10"
+        android:iconTint="@color/white"
+
+        android:title="Ajouter une table"
+        app:showAsAction="withText|ifRoom"></item>
+
+
+    <item
+        android:id="@+id/cancel"
+        android:orderInCategory="10"
+        android:iconTint="@color/white"
+        android:title="Annuler"
+        app:showAsAction="withText|ifRoom"></item>
+
+</menu>

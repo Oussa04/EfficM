@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/border"
+    android:clickable="false"
+    android:gravity="center"
+
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/status"
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="36:20"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="36dp"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:paddingTop="36dp">
+
+        <TextView
+            android:id="@+id/libelle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Table N°12"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="terrase"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/commande"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Commande n°36"
+                android:textAlignment="textStart" />
+
+            <TextView
+
+                android:id="@+id/elements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
+                android:text="6 éléments"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

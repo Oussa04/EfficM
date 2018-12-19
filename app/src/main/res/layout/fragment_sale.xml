@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            app:srcCompat="@drawable/empty" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Pas de catégories/produits"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sidebar"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/allproducts"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_items" />
+
+            <TextView
+                android:id="@+id/tedxtView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tout"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/favoriteproducts"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/textdView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Favories"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/discount"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_discount" />
+
+            <TextView
+                android:id="@+id/texdtView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Remise"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/productsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+
+        android:layout_toLeftOf="@+id/ticketLayout"
+        android:layout_toRightOf="@+id/sidebar"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/productsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:background="@drawable/border">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/products"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:horizontalSpacing="8dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="8dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+
+            android:background="@drawable/border">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/categories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/ticketLayout"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+
+        android:layout_alignParentRight="true"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ticketheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/darker_gray"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ticketCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Articles (0)"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/emptyTicket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_marginRight="-20dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:tint="@color/colorWhite"
+                    app:srcCompat="@drawable/ic_delete" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/clientinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorGreen"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/removeCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_clear_black_24dp" />
+
+                <TextView
+                    android:id="@+id/customerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Rachid ben salem dddddddd"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/customerDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="-30%"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/z"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ticketheader"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+        <LinearLayout
+            android:id="@+id/z"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/scan"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:text="Sauvegarder"
+                android:textColor="@android:color/white"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/qrcodescanicon" />
+
+            <ImageButton
+                android:id="@+id/save"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:text="Sauvegarder"
+                android:textColor="@android:color/white"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/save" />
+
+            <Button
+                android:id="@+id/checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:scaleType="fitCenter"
+                android:text="Terminer"
+                android:textColor="@android:color/white"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_money" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

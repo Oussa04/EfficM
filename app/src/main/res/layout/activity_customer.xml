@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#FAFAFA"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="128dp"
+        android:paddingRight="128dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="32dp"
+
+
+            android:layout_marginRight="32dp"
+            android:background="@drawable/card"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ajouter un client"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="96dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/adduser" />
+
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+
+
+                        android:background="@drawable/selector_gray"
+                        android:hint="Nom et prénom"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="16dp"
+                        android:textColorHint="@color/textColorHint" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+
+
+                        android:background="@drawable/selector_gray"
+                        android:hint="E-mail"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="16dp"
+                        android:textColorHint="@color/textColorHint" />
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+
+
+                        android:background="@drawable/selector_gray"
+                        android:hint="Numéro de téléphone"
+                        android:inputType="phone"
+                        android:paddingLeft="16dp"
+                        android:textColorHint="@color/textColorHint" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="74dp"
+                        android:layout_marginRight="72dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Groupe"
+                        android:textAlignment="center" />
+
+                    <Spinner
+                        android:id="@+id/group"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+
+
+                        android:background="@drawable/selector_gray"
+
+                        android:spinnerMode="dialog"
+                        android:text="Groupe" />
+                    <Button
+                        android:id="@+id/finish"
+                        android:layout_width="168dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_round_green"
+                        android:text="Terminer"
+                        android:textColor="@android:color/white" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

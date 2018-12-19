@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGreen"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/texty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <com.andrognito.patternlockview.PatternLockView
+        android:id="@+id/pattern_lock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        app:aspectRatio="square"
+        app:aspectRatioEnabled="true"
+
+        app:dotAnimationDuration="200"
+        app:dotCount="3"
+        app:dotNormalSize="12dp"
+        app:dotSelectedSize="24dp"
+        app:normalStateColor="@color/white"
+        app:pathEndAnimationDuration="100"
+        app:pathWidth="4dp" />
+
+    <Button
+        android:id="@+id/confirmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
+        android:text="Button"
+        android:textColor="@color/colorGreen" />
+
+
+</LinearLayout>

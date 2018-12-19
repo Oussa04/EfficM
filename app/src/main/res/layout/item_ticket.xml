@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:clickable="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/productname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Café Cappucin"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12,000"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/singleprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1.2dt" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/minus"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:src="@drawable/ic_remove"
+            android:tint="@color/colorWhite"
+            app:cb_color="@color/colorAccent"
+            app:cb_pressedRingWidth="8dip" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="66"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/plus"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:src="@drawable/ic_add"
+            android:tint="@color/colorWhite"
+            app:cb_color="@color/colorAccent"
+            app:cb_pressedRingWidth="8dip" />
+
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/remove"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="120dp"
+            android:src="@drawable/ic_delete"
+            android:tint="@color/colorWhite"
+            app:cb_color="@color/colorRed"
+            app:cb_pressedRingWidth="8dip" />
+    </LinearLayout>
+
+
+</LinearLayout>

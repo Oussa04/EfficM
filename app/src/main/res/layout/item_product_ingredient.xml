@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/mProgressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+
+                    />
+
+                <tn.meteor.efficaisse.utils.SquareImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/product" />
+
+                <tn.meteor.efficaisse.utils.SquareImageView
+                    android:id="@+id/gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:alpha="0.7"
+
+                    android:scaleType="centerCrop"
+                    android:scaleY="-1"
+                    android:src="@drawable/gradient" />
+
+                <ImageButton
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="10dp"
+
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:tint="@android:color/white"
+                    card_view:srcCompat="@drawable/ic_mode_edit" />
+
+                <ImageButton
+                    android:id="@+id/remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="10dp"
+
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:tint="@android:color/white"
+                    card_view:srcCompat="@drawable/ic_close" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left|center_vertical"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:elevation="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Fromage"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ingredient_product_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.02g"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp"
+                    android:text="40KG"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

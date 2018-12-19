@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="32dp"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/productinfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/card"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="32dp"
+            app:srcCompat="@drawable/manager" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/selector_gray"
+                android:enabled="false"
+
+                android:hint="Nom et prénom"
+                android:inputType="textPersonName"
+                android:paddingLeft="16dp"
+                android:textAlignment="center"
+                android:textColorHint="@color/textColorHint" />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/selector_gray"
+                android:enabled="false"
+
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+
+                android:paddingLeft="16dp"
+                android:textAlignment="center"
+                android:textColorHint="@color/textColorHint" />
+
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/selector_gray"
+                android:enabled="false"
+
+                android:hint="Téléphone"
+                android:inputType="phone"
+
+                android:paddingLeft="16dp"
+                android:textAlignment="center"
+                android:textColorHint="@color/textColorHint" />
+
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Groupe"
+                android:textAlignment="textStart" />
+
+            <Spinner
+                android:id="@+id/group"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:spinnerMode="dialog"
+                android:text="Groupe" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/save"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_weight="1"
+                android:src="@drawable/ic_save"
+                android:tint="@color/colorWhite"
+                app:cb_color="@color/colorGreen"
+                app:cb_pressedRingWidth="8dip" />
+
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/cancel"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_weight="1"
+
+                android:src="@drawable/ic_close"
+                android:tint="@color/colorWhite"
+                app:cb_color="@color/dark_gray"
+                app:cb_pressedRingWidth="8dip" />
+
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/editIngredient"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_weight="1"
+
+                android:src="@drawable/ic_mode_edit"
+                android:tint="@color/colorWhite"
+                app:cb_color="@color/colorGreen"
+                app:cb_pressedRingWidth="8dip" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/commandes"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/allingredientsPanel"
+        android:layout_toRightOf="@+id/productinfo"
+
+        android:layout_weight="1.5"
+        android:visibility="visible" />
+
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_sale"
+            android:icon="@drawable/ic_add_shopping"
+            android:title="Ventes" />
+
+        <item
+            android:id="@+id/nav_lounge"
+            android:icon="@drawable/ic_lounge"
+            android:title="Lounge" />
+
+        <item
+            android:id="@+id/nav_sale_history"
+            android:icon="@drawable/ic_shopping"
+            android:title="Commmandes" />
+        <item
+            android:id="@+id/nav_articles"
+            android:icon="@drawable/ic_items"
+            android:title="Articles" />
+        <item
+            android:id="@+id/nav_stock"
+            android:icon="@drawable/ic_basket"
+            android:title="Stock" />
+        <item
+            android:id="@+id/nav_receipt"
+            android:icon="@drawable/ic_receipt"
+            android:title="Recettes" />
+
+
+        <item android:title="Fidélité">
+            <menu>
+                <item
+                    android:id="@+id/nav_customer_care"
+                    android:icon="@drawable/ic_favorite"
+                    android:title="Clients" />
+                <item
+                    android:id="@+id/nav_discounts"
+                    android:icon="@drawable/ic_offer"
+                    android:title="Promotions" />
+            </menu>
+        </item>
+
+
+        <item android:title="Analyses et Statistiques">
+            <menu>
+                <item
+                    android:id="@+id/nav_analyses"
+                    android:icon="@drawable/ic_pie_chart"
+                    android:title="Analyse" />
+                <item
+                    android:id="@+id/nav_stats"
+                    android:icon="@drawable/ic_show"
+                    android:title="Statistiques" />
+                <item
+                    android:id="@+id/nav_event"
+                    android:icon="@drawable/ic_show"
+                    android:title="Event" />
+            </menu>
+        </item>
+
+        <item android:title="Paramètres">
+            <menu>
+                <item
+                    android:id="@+id/nav_throw_error"
+                    android:icon="@drawable/ic_error"
+                    android:title="Crash Test" />
+                <item
+                    android:id="@+id/nav_change_user"
+                    android:icon="@drawable/ic_people"
+                    android:title="Ajouter un utilisateur" />
+                <item
+                    android:id="@+id/nav_sync"
+                    android:icon="@drawable/ic_sync"
+                    android:title="Synchronisation" />
+
+                <item
+                    android:id="@+id/nav_disconnect"
+                    android:icon="@drawable/ic_off"
+                    android:title="Déconnexion" />
+
+
+            </menu>
+        </item>
+    </group>
+
+</menu>

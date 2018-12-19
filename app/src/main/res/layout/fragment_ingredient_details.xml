@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:id="@+id/productinfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="0.75"
+        android:background="@drawable/card"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:visibility="visible">
+
+
+        <tn.meteor.efficaisse.utils.SquareImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="235dp"
+            android:layout_height="235dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/product"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/libelle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/selector_gray"
+                android:enabled="false"
+
+                android:hint="Libellé"
+                android:inputType="textPersonName"
+                android:paddingLeft="16dp"
+                android:textAlignment="center"
+                android:textColorHint="@color/textColorHint" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Prix d'achat"
+                android:textAlignment="viewStart" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/selector_gray"
+                android:enabled="false"
+
+                android:hint="Prix d'achat"
+                android:inputType="numberDecimal"
+                android:paddingLeft="16dp"
+                android:textAlignment="center"
+                android:textColorHint="@color/textColorHint" />
+
+            <TextView
+                android:id="@+id/TextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Quantité disponible"
+                android:textAlignment="viewStart" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <EditText
+                    android:id="@+id/quantity"
+                    android:layout_width="227dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_gray"
+                    android:enabled="false"
+
+                    android:hint="Quantité"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="16dp"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/textColorHint" />
+
+
+                <TextView
+                    android:id="@+id/unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Litres"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/save"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_weight="1"
+                android:src="@drawable/ic_save"
+                android:tint="@color/colorWhite"
+                app:cb_color="@color/colorGreen"
+                app:cb_pressedRingWidth="8dip" />
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/photo"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_weight="1"
+
+                android:src="@drawable/ic_photo"
+                android:tint="@color/colorWhite"
+                app:cb_color="@color/colorAccent"
+                app:cb_pressedRingWidth="8dip" />
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/deleteIngredient"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_weight="1"
+
+                android:src="@drawable/ic_delete"
+                android:tint="@color/colorWhite"
+                app:cb_color="@color/colorRed"
+                app:cb_pressedRingWidth="8dip" />
+
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/cancel"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_weight="1"
+
+                android:src="@drawable/ic_close"
+                android:tint="@color/colorWhite"
+                app:cb_color="@color/dark_gray"
+                app:cb_pressedRingWidth="8dip" />
+
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/editIngredient"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_weight="1"
+
+                android:src="@drawable/ic_mode_edit"
+                android:tint="@color/colorWhite"
+                app:cb_color="@color/colorGreen"
+                app:cb_pressedRingWidth="8dip" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+
+        >
+
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/productIngredients"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+
+
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout12"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            android:gravity="center_vertical|center_horizontal|fill_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="Prévision:"
+                android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/prevision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="fff"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/allingredientsPanel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="0.75"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+
+        android:visibility="visible">
+
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            app:floatingSearch_close_search_on_keyboard_dismiss="true"
+            app:floatingSearch_dimBackground="false"
+            app:floatingSearch_leftActionMode="noLeftAction"
+            app:floatingSearch_searchBarMarginLeft="5dp"
+            app:floatingSearch_searchBarMarginRight="5dp"
+            app:floatingSearch_searchBarMarginTop="5dp"
+            app:floatingSearch_searchHint="Chercher..."
+            app:floatingSearch_showOverFlowMenu="false"
+            app:floatingSearch_showSearchKey="true"
+
+            app:floatingSearch_suggestionsListAnimDuration="250">
+
+        </com.arlib.floatingsearchview.FloatingSearchView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/sideRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
